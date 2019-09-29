@@ -25,6 +25,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "discord.js": "github:discordjs/discord.js",
+    "json-beautify": "^1.1.1",
     "mongoose": "^5.7.1"
   }
 }
