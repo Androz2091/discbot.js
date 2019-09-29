@@ -33,8 +33,14 @@ module.exports = class {
             PING_USAGE: "ping",
             PING_EXAMPLES: "$ping",
             PING_WAIT: `${e.loading} | Pinging...`,
-            PING_RESULT: (ms) => `${e.success} | Pong! Latency: \`${ms}\` ms!`
+            PING_RESULT: (ms) => `${e.success} | Pong! Latency: \`${ms}\` ms!`,
 
+            /* BUILD EMOJIS COMMAND */
+            BUILD_EMOJIS_DESCRIPTION: "Automatically adds the emojis necessary for the bot to work properly and generates a configuration!",
+            BUILD_EMOJIS_USAGE: "build-emojis",
+            BUILD_EMOJIS_EXAMPLES: "$build-emojis",
+            BUILD_EMOJIS_IN_PROGRESS: `${e.success} | Adding emojis is in progress....`,
+            BUILD_EMOJIS_INFOS: `${e.success} | Copy and paste this into your configuration!`
         }
     }
 
