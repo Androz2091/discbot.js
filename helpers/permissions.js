@@ -18,7 +18,7 @@ module.exports = [
         check: (message) => (message.guild ? message.author.id === message.guild.ownerID : false),
     },
     {
-        level: 5,
+        level: 4,
         check: (message) => config.owners.some((o) => o === message.author.id),
     },
 ];
