@@ -62,3 +62,6 @@ typings/
 
 # Configuration file
 config.js
+
+# Package-lock file
+package-lock.json
