@@ -17,7 +17,7 @@ module.exports = class {
         // If the member on a guild is invisible or not cached, fetch him
         if(message.guild && !message.member) await message.guild.members.fetch(message.author.id);
 
-        let guildConf = (message.guild ? await this.client.findOrCreateGuild({ id: message.guild.id }) : this.client.config.guildConf);
+        let guildConf = (message.guild ? await this.client.findOrCreateGuild({ id: message.guild.id }) : { prefix: "", language: this.client.config.guildConf.language });
         data.guildConf = guildConf;
         data.config = this.client.config;
 
@@ -32,7 +32,7 @@ module.exports = class {
         // Gets the prefix
         let prefixes = [ guildConf.prefix, this.client.user.username, "<@"+this.client.user.id+">" ];
         let prefix = (message.channel.type !== "dm" ? prefixes.find((p) => message.content.startsWith(p)) : "");
-        if(!prefix) return;
+        if(!prefix && prefix !== "") return;
 
         let args = message.content.slice(prefix.length).trim().split(/ +/g);
         let command = args.shift().toLowerCase();
