@@ -1,0 +1,30 @@
+{
+  "name": "discbot",
+  "version": "1.0.0",
+  "description": "🚀 Powerful discord bot template, for a solid structure!",
+  "main": "discbot.js",
+  "scripts": {
+    "test": "node discbot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Androz2091/Discbot.js.git"
+  },
+  "keywords": [
+    "template",
+    "discord.js",
+    "bot",
+    "structure"
+  ],
+  "author": "Androz2091",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Androz2091/Discbot.js/issues"
+  },
+  "homepage": "https://github.com/Androz2091/Discbot.js#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "discord.js": "github:discordjs/discord.js",
+    "mongoose": "^5.7.1"
+  }
+}
