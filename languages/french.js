@@ -40,7 +40,22 @@ module.exports = class {
             BUILD_EMOJIS_USAGE: "build-emojis",
             BUILD_EMOJIS_EXAMPLES: "$build-emojis",
             BUILD_EMOJIS_IN_PROGRESS: `${e.success} | Ajout des émojis en cours...`,
-            BUILD_EMOJIS_INFOS: `${e.success} | Copiez-collez ceci dans votre configuration !`
+			BUILD_EMOJIS_INFOS: `${e.success} | Copiez-collez ceci dans votre configuration !`,
+			
+			/* HELP COMMAND */
+            HELP_TITLE: "Liste des commandes",
+            HELP_SUBTITLE: (prefix) => `● Pour avoir de l'aide sur une commande tapez \`${prefix}help <commande>\` !`,
+            HELP_HEADINGS: [
+				"Aide :",
+				"Utilisation :",
+				"Exemples :",
+				"Groupe :",
+				"Description :",
+				"Alias :",
+				"Permissions :"
+            ],
+            HELP_NO_ALIASES: "Aucun alias.",
+            HELP_ERR_NOT_FOUND: (cmd) => `${e.error} | Commande \`${cmd}\` introuvable !`
 
         }
     }

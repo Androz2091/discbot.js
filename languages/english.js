@@ -39,8 +39,23 @@ module.exports = class {
             BUILD_EMOJIS_DESCRIPTION: "Automatically adds the emojis necessary for the bot to work properly and generates a configuration!",
             BUILD_EMOJIS_USAGE: "build-emojis",
             BUILD_EMOJIS_EXAMPLES: "$build-emojis",
-            BUILD_EMOJIS_IN_PROGRESS: `${e.success} | Adding emojis is in progress....`,
-            BUILD_EMOJIS_INFOS: `${e.success} | Copy and paste this into your configuration!`
+            BUILD_EMOJIS_IN_PROGRESS: `${e.success} | Adding emojis is in progress...-`,
+            BUILD_EMOJIS_INFOS: `${e.success} | Copy and paste this into your configuration!`,
+
+            /* HELP COMMAND */
+            HELP_TITLE: "List of commands",
+            HELP_SUBTITLE: (prefix) => `● To get help on a command type \`${prefix}help <command>\` !`,
+            HELP_HEADINGS: [
+				"Help:",
+				"Usage:",
+				"Examples:",
+				"Group:",
+				"Description:",
+				"Aliases:",
+				"Permissions:"
+            ],
+            HELP_NO_ALIASES: "No alias.",
+            HELP_ERR_NOT_FOUND: (cmd) => `${e.error} | Command \`${cmd}\` not found!`
         }
     }
 
