@@ -20,7 +20,13 @@ module.exports = {
     },
 
     /* ARRAY OF BOT'S OWNERS IDs */
-    owners: [ ],
+    owners: [],
+
+    /* EMBED CONFIGURATION */
+    embed: {
+        color: "#FF0000",
+        footer: "Discbot | Open source Discord bot template"
+    },
 
     /* STATUS LIST (Playing to... or listen to...) */
     status: {
