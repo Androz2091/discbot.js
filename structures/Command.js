@@ -26,7 +26,7 @@ module.exports = class Command {
         nsfw = false
     })
     {
-        let category = (commandPath ? commandPath.split(path.sep)[parseInt(commandPath.split(path.sep).length-1, 10)] : "Other");
+        let category = (commandPath ? commandPath.split(path.sep).pop() : "Other");
         this.client = client;
         this.conf = { enabled, aliases, permLevel, clientPermissions, cooldown, guildOnly, nsfw };
         this.help = { name, description, usage, examples, category };

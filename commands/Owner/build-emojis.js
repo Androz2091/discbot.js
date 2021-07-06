@@ -1,5 +1,4 @@
 const Command = require("../../structures/Command.js"),
-Discord = require("discord.js"),
 json = require("json-beautify"),
 fs = require("fs"),
 emojis = fs.readdirSync("./assets/img/emojis").map((e) => e.split("."));

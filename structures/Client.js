@@ -61,7 +61,7 @@ class Atlanta extends Client {
 
     getLevel(message) {
 		let permlvl = 0;
-		const permOrder = this.permissions.slice(0).sort((p, c) => p.level < c.level ? 1 : -1);
+		const permOrder = this.permissions.slice(0).sort((p, c) => c.level - p.level);
 		while (permOrder.length) {
 			const currentLevel = permOrder.shift();
 			if(message.guild && currentLevel.guildOnly) continue;

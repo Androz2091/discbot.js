@@ -74,7 +74,7 @@ module.exports = class {
 	}
 
 	getLang(){
-		return lang;
+		return this.language;
 	}
 
 	printDate(pdate, isLongDate){
@@ -111,7 +111,6 @@ module.exports = class {
 		(!isMinutes ? "" : "{minutes} minutes and ")+
 		("{seconds} seconds");
 		let sentence = pattern
-        .replace("{duration}", pattern)
         .replace("{days}", days)
         .replace("{hours}", hours)
         .replace("{minutes}", minutes)

@@ -39,7 +39,7 @@ class Help extends Command {
             if(!cmd) return message.channel.send(message.language.get("HELP_CMD_NOT_FOUND", args[0]));
 
             // Replace $ caract with the server prefix
-            let examples = cmd.help.examples(message.language).replace(/[$_]/g, data.guildConf.prefix);
+            let examples = cmd.help.examples(message.language)?.replace(/[$_]/g, data.guildConf.prefix) || '';    // FIX: could be undefined
 
             // Creates the help embed
             let groupEmbed = new Discord.MessageEmbed()
