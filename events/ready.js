@@ -12,7 +12,7 @@ module.exports = class {
 
         // Logs some informations using the logger file
         client.logger.log(`Loading a total of ${client.commands.size} command(s).`, "log");
-        client.logger.log(`${client.user.tag}, ready to serve ${client.users.size} users in ${client.guilds.size} servers.`, "ready");
+        client.logger.log(`${client.user.tag}, ready to serve ${client.users.cache.size} users in ${client.guilds.cache.size} servers.`, "ready");
 
         // Update bot's status
 
@@ -24,8 +24,8 @@ module.exports = class {
             let status = statusList[parseInt(i, 10)];
             
             let statusContent = status.content
-            .replace(/{usersCount}/g, client.users.size)
-            .replace(/{guildsCount}/g, client.guilds.size);
+            .replace(/{usersCount}/g, client.users.cache.size)
+            .replace(/{guildsCount}/g, client.guilds.cache.size);
     
             client.user.setActivity(statusContent, { type: status.type });
     

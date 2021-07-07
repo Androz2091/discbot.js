@@ -1,11 +1,8 @@
 const { bgBlue, black, green } = require("chalk");
 
 const dateTimePad = (value, digits) => {
-    let number = value
-    while (number.toString().length < digits) {
-        number = "0" + number
-    }
-    return number;
+    const padding_len = Math.max(digits - value.toString().length, 0);
+    return '0'.repeat(padding_len) + value;
 }
 
 const formatDate = (date = new Date()) => {
